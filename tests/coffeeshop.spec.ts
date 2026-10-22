@@ -4,7 +4,7 @@ const BASE_URL = 'https://seleniumbase.io/coffee/';
 
 test.describe('Coffee Shop', () => {
  
-  test('Coffee_001 - Verify the total price once buy one coffee', async ({ page }) => {
+  test('TC_CF_01 - Check total for 1 coffee', async ({ page }) => {
 
     await page.goto(BASE_URL);
     await page.locator('div[data-sb="Cafe-Latte"]').click();
@@ -14,7 +14,7 @@ test.describe('Coffee Shop', () => {
   });
 
 
-  test('Coffee_002 - Verify the total price once buy three coffee', async ({ page }) => {
+  test('TC_CF_02 - Check total for 3 coffees', async ({ page }) => {
 
     await page.goto(BASE_URL);
     await page.locator('div[data-sb="Mocha"]').click();
@@ -27,7 +27,7 @@ test.describe('Coffee Shop', () => {
 
 
 
-  test('Coffee_003 - Verify the total price once buy the same kind of coffee 2 units', async ({ page }) => {
+  test('TC_CF_03 - Check total for 2 units of the same coffee', async ({ page }) => {
 
     await page.goto(BASE_URL);
     await page.locator('div[data-sb="Americano"]').click();
